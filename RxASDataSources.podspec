@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
 
      s.source_files  = "Sources/**/*.swift"
      s.framework  = "Foundation"
-     s.dependency 'RxSwift', '~> 4.0'
-     s.dependency 'RxCocoa', '~> 4.0'
-     s.dependency 'Differentiator', '~> 3.0'
-     s.dependency 'Texture', '~> 2.7'
+     s.dependency 'RxSwift', '~> 4.4'
+     s.dependency 'RxCocoa', '~> 4.4'
+     s.dependency 'Differentiator', '~> 3.2'
+     s.dependency 'Texture', '~> 2.8'
 
 end
