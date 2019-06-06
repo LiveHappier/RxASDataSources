@@ -209,13 +209,13 @@ open class ASCollectionSectionedDataSource<S: SectionModelType>: NSObject, ASCol
     }
 
     open func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
-        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
+//        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
 
         return configureCell(self, collectionNode, indexPath, self[indexPath])
     }
 
     open func collectionNode(_ collectionNode: ASCollectionNode, nodeBlockForItemAt indexPath: IndexPath) -> ASCellNodeBlock {
-        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
+//        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
 
         return configureCellBlock(self, collectionNode, indexPath, self[indexPath])
     }

@@ -56,6 +56,8 @@
 		57E5636A1F291A81002E825B /* ASCollectionNode+SectionViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E563691F291A81002E825B /* ASCollectionNode+SectionViewType.swift */; };
 		57E5636C1F291ACC002E825B /* ASTableNode+SectionedViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5636B1F291ACC002E825B /* ASTableNode+SectionedViewType.swift */; };
 		6A520ADB1831906E0BCC284C /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497271B10CB7AAE70BBDEAF0 /* Pods_Example.framework */; };
+		751BEEE022A9335100F7B034 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751BEEDF22A9335100F7B034 /* AssetsLibrary.framework */; };
+		751BEEE122A9337100F7B034 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751BEEDF22A9335100F7B034 /* AssetsLibrary.framework */; };
 		758F9771221EA9EC0051D2C6 /* RxASDataSources.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 758F9770221EA9EC0051D2C6 /* RxASDataSources.podspec */; };
 		ACB28E05200527CB0076CAC5 /* AnimationTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB28E03200524DB0076CAC5 /* AnimationTransition.swift */; };
 		ACB28E0720052A2C0076CAC5 /* ASCollectionNode+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB28E0620052A2C0076CAC5 /* ASCollectionNode+Rx.swift */; };
@@ -108,6 +110,7 @@
 		57E563691F291A81002E825B /* ASCollectionNode+SectionViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASCollectionNode+SectionViewType.swift"; sourceTree = "<group>"; };
 		57E5636B1F291ACC002E825B /* ASTableNode+SectionedViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASTableNode+SectionedViewType.swift"; sourceTree = "<group>"; };
 		5D6F346FB9800367EA3FFEA5 /* Pods_RxTextureDataSources_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTextureDataSources_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		751BEEDF22A9335100F7B034 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		758F9770221EA9EC0051D2C6 /* RxASDataSources.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RxASDataSources.podspec; sourceTree = "<group>"; };
 		ACB28E03200524DB0076CAC5 /* AnimationTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTransition.swift; sourceTree = "<group>"; };
 		ACB28E0620052A2C0076CAC5 /* ASCollectionNode+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ASCollectionNode+Rx.swift"; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751BEEE022A9335100F7B034 /* AssetsLibrary.framework in Frameworks */,
 				574265691F6424BE0059BD8F /* Differentiator.framework in Frameworks */,
 				574265671F6424830059BD8F /* RxCocoa.framework in Frameworks */,
 				574265661F64246E0059BD8F /* RxSwift.framework in Frameworks */,
@@ -129,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751BEEE122A9337100F7B034 /* AssetsLibrary.framework in Frameworks */,
 				6A520ADB1831906E0BCC284C /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +192,7 @@
 		357D954B1DA3F2B400AEC55F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				751BEEDF22A9335100F7B034 /* AssetsLibrary.framework */,
 				574265681F6424BE0059BD8F /* Differentiator.framework */,
 				57826BDC1F29509700FB0414 /* RxCocoa.framework */,
 				57826BD81F29506000FB0414 /* RxDataSources.framework */,
@@ -370,6 +376,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -430,13 +437,13 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
 				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 			);
@@ -446,14 +453,14 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -587,13 +594,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -642,11 +649,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -666,10 +673,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dangthaison91.RxASDataSources;
+				PRODUCT_BUNDLE_IDENTIFIER = co.livehappier.RxASDataSources;
 				PRODUCT_NAME = RxASDataSources;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -685,10 +692,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dangthaison91.RxASDataSources;
+				PRODUCT_BUNDLE_IDENTIFIER = co.livehappier.RxASDataSources;
 				PRODUCT_NAME = RxASDataSources;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -699,19 +706,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = MRS6F96DBN;
+				DEVELOPMENT_TEAM = EXEAVP59CG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Checkouts/RxDataSources/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dangthaison91.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -722,19 +729,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = MRS6F96DBN;
+				DEVELOPMENT_TEAM = EXEAVP59CG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Checkouts/RxSwift/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Checkouts/RxDataSources/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dangthaison91.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
