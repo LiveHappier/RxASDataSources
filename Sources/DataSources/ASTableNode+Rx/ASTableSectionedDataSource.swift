@@ -233,13 +233,13 @@ open class ASTableSectionedDataSource<S: SectionModelType>: NSObject, ASTableDat
     }
     
     open func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
-        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
+//        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
 
         return configureCell(self, tableNode, indexPath, self[indexPath])
     }
 
     open func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
+//        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
 
         return configureCellBlock(self, tableNode, indexPath, self[indexPath])
     }
