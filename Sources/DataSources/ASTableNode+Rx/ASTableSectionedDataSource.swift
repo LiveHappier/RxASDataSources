@@ -19,7 +19,7 @@ open class ASTableSectionedDataSource<S: SectionModelType>: NSObject, ASTableDat
     public typealias Section = S
     
     public typealias ConfigureCell = (ASTableSectionedDataSource<S>, ASTableNode, IndexPath, I) -> ASCellNode
-    public typealias ConfigureCellBlock = (ASTableSectionedDataSource<S>, ASTableNode, IndexPath, I) -> ASCellNodeBlock
+    public typealias ConfigureCellBlock = (ASTableSectionedDataSource<S>, ASTableNode, IndexPath, I?) -> ASCellNodeBlock
     public typealias TitleForHeaderInSection = (ASTableSectionedDataSource<S>, Int) -> String?
     public typealias TitleForFooterInSection = (ASTableSectionedDataSource<S>, Int) -> String?
     public typealias CanEditRowAtIndexPath = (ASTableSectionedDataSource<S>, IndexPath) -> Bool
@@ -34,7 +34,7 @@ open class ASTableSectionedDataSource<S: SectionModelType>: NSObject, ASTableDat
         return ASTableDataSourceNotSet().tableNode(node, nodeForRowAt: indexPath)
     }
 
-    fileprivate static func configureCellBlockNotSet(dataSource: ASTableSectionedDataSource<S>, node: ASTableNode, indexPath: IndexPath, model: I) -> ASCellNodeBlock {
+    fileprivate static func configureCellBlockNotSet(dataSource: ASTableSectionedDataSource<S>, node: ASTableNode, indexPath: IndexPath, model: I?) -> ASCellNodeBlock {
         return { dataSource.tableNode(node, nodeForRowAt: indexPath) }
     }
 
@@ -233,13 +233,17 @@ open class ASTableSectionedDataSource<S: SectionModelType>: NSObject, ASTableDat
     }
     
     open func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
-//        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
+        if(indexPath.section >= _sectionModels.count || indexPath.item >= _sectionModels[indexPath.section].items.count){
+            return ASCellNode()
+        }
 
         return configureCell(self, tableNode, indexPath, self[indexPath])
     }
 
     open func tableNode(_ tableNode: ASTableNode, nodeBlockForRowAt indexPath: IndexPath) -> ASCellNodeBlock {
-//        precondition(indexPath.item < _sectionModels[indexPath.section].items.count)
+        if(indexPath.section >= _sectionModels.count || indexPath.item >= _sectionModels[indexPath.section].items.count){
+            return configureCellBlock(self, tableNode, indexPath, nil)
+        }
 
         return configureCellBlock(self, tableNode, indexPath, self[indexPath])
     }
